@@ -1,0 +1,116 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int rps(char,char);
+
+
+int main()
+{
+    int i,n,result;
+    int your_point=0,cpoint=0;
+    char computer,person;
+
+    for(i=0;i<10;i++)
+
+
+
+    {
+    srand(time(NULL));
+
+    n=rand() % 9;
+
+    //r=rock p=paper s=scissor
+    if (n>=0 && n<3)
+    {
+        computer = 'r';
+    }
+    else if(i>=3 && i<6)
+    {
+        computer = 'p';
+    }
+    else
+    {
+        computer ='s';
+    }
+
+    printf("enter input r=rock,p=paper,s=scissor\n");
+    scanf(" %c",&person);
+
+    result=rps(computer,person);
+
+
+    if(result==1)
+    {
+     printf("you choose %c comp choose %c\n",person,computer);
+     your_point+=1;
+     cpoint+=0;
+    }
+    else if(result==-1)
+    {
+        printf("you choose %c comp choose %c\n",person,computer);
+        your_point+=0;
+        cpoint+=1;
+    }
+    else
+    {
+        printf("you choose %c comp choose %c\n",person,computer);
+        your_point+=0;
+        cpoint+=0;
+    }
+
+    }
+    if(your_point>cpoint)
+    {
+        printf("\n\n\n\n\n\nYOU WIN THE GAME\n\n\n\n\n\n");
+    }
+    else if(your_point==cpoint)
+    {
+        printf("\n\n\n\n\n\nMATCH DRAW\n\n\n\n\n\n");
+    }
+    else
+    {
+        printf("\n\n\n\n\n\nYOU LOST THE GAME\n\n\n\n\n\n");
+    }
+    printf("your point is | computer point is \n");
+    printf("%d \t\t %d",your_point,cpoint);
+
+}
+
+
+
+
+//function to determine the result
+//r,p,s=6choices
+int rps(char computer,char person)
+{
+    if (computer==person)
+    {
+        return 0;
+    }
+    else if(computer=='r' && person=='p')
+    {
+        return 1;
+    }
+    else if(computer=='r' && person=='s')
+    {
+        return -1;
+    }
+    else if(computer=='p' && person=='r')
+    {
+        return -1;
+    }
+    else if (computer=='p' && person=='s')
+    {
+        return 1;
+    }
+    else if(computer=='s' && person=='r')
+    {
+        return 1;
+    }
+    else
+    {
+        return -1;
+    }
+}
+

@@ -62,18 +62,19 @@ int main()
     }
     if(your_point>cpoint)
     {
-        printf("\n\n\n\n\n\nYOU WIN THE GAME\n\n\n\n\n\n");
+        printf("\n\n\n\n\n\n\nYOU WIN THE GAME\n\n\n\n\n\n\n");
     }
     else if(your_point==cpoint)
     {
-        printf("\n\n\n\n\n\nMATCH DRAW\n\n\n\n\n\n");
+        printf("\n\n\n\n\n\n\nMATCH DRAW\n\n\n\n\n\n\n");
     }
     else
     {
-        printf("\n\n\n\n\n\nYOU LOST THE GAME\n\n\n\n\n\n");
+        printf("\n\n\n\n\n\n\nYOU LOST THE GAME\n\n\n\n\n\n\n");
     }
     printf("your point is | computer point is \n");
     printf("%d \t\t %d",your_point,cpoint);
+    printf("VILAATU BY ROSHAN");
 
 }
 

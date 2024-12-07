@@ -3,8 +3,7 @@
 #include <time.h>
 
 int rps(char,char);
-
-
+//used to denote it is a comment
 int main()
 {
     int i,n,result;

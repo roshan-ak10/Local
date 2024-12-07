@@ -75,6 +75,10 @@ int main()
     printf("your point is | computer point is \n");
     printf("%d \t\t %d",your_point,cpoint);
     printf("VILAATU BY ROSHAN");
+    printf("enter your rating out of 5");
+    int rate;
+    scanf("d",&rate);
+    return 0;
 
 }
 
